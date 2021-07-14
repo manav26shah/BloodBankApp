@@ -33,19 +33,19 @@ namespace BloodBankApp
             this.btnExit = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.donorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.searchBloodDonorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.stockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteDonorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewDonorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.allDonorDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchBloodDonorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.locationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bloodGroupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.increaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.decreaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.detailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteDonorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteDonorToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,48 +88,6 @@ namespace BloodBankApp
             this.donorToolStripMenuItem.Size = new System.Drawing.Size(102, 64);
             this.donorToolStripMenuItem.Text = "Donor";
             // 
-            // searchBloodDonorToolStripMenuItem
-            // 
-            this.searchBloodDonorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.locationToolStripMenuItem,
-            this.bloodGroupToolStripMenuItem});
-            this.searchBloodDonorToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("searchBloodDonorToolStripMenuItem.Image")));
-            this.searchBloodDonorToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.searchBloodDonorToolStripMenuItem.Name = "searchBloodDonorToolStripMenuItem";
-            this.searchBloodDonorToolStripMenuItem.Size = new System.Drawing.Size(174, 64);
-            this.searchBloodDonorToolStripMenuItem.Text = "Search Blood Donor";
-            // 
-            // stockToolStripMenuItem
-            // 
-            this.stockToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.increaseToolStripMenuItem,
-            this.decreaseToolStripMenuItem,
-            this.detailsToolStripMenuItem});
-            this.stockToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("stockToolStripMenuItem.Image")));
-            this.stockToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.stockToolStripMenuItem.Name = "stockToolStripMenuItem";
-            this.stockToolStripMenuItem.Size = new System.Drawing.Size(98, 64);
-            this.stockToolStripMenuItem.Text = "Stock";
-            // 
-            // deleteDonorToolStripMenuItem
-            // 
-            this.deleteDonorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.deleteDonorToolStripMenuItem1});
-            this.deleteDonorToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deleteDonorToolStripMenuItem.Image")));
-            this.deleteDonorToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.deleteDonorToolStripMenuItem.Name = "deleteDonorToolStripMenuItem";
-            this.deleteDonorToolStripMenuItem.Size = new System.Drawing.Size(138, 64);
-            this.deleteDonorToolStripMenuItem.Text = "Delete Donor";
-            // 
-            // logOutToolStripMenuItem
-            // 
-            this.logOutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("logOutToolStripMenuItem.Image")));
-            this.logOutToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(122, 64);
-            this.logOutToolStripMenuItem.Text = "Log Out";
-            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
-            // 
             // addNewDonorToolStripMenuItem
             // 
             this.addNewDonorToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("addNewDonorToolStripMenuItem.Image")));
@@ -137,6 +95,7 @@ namespace BloodBankApp
             this.addNewDonorToolStripMenuItem.Name = "addNewDonorToolStripMenuItem";
             this.addNewDonorToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
             this.addNewDonorToolStripMenuItem.Text = "Add New Donor";
+            this.addNewDonorToolStripMenuItem.Click += new System.EventHandler(this.addNewDonorToolStripMenuItem_Click);
             // 
             // updateDetailsToolStripMenuItem
             // 
@@ -154,12 +113,23 @@ namespace BloodBankApp
             this.allDonorDetailsToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
             this.allDonorDetailsToolStripMenuItem.Text = "All Donor Details";
             // 
+            // searchBloodDonorToolStripMenuItem
+            // 
+            this.searchBloodDonorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.locationToolStripMenuItem,
+            this.bloodGroupToolStripMenuItem});
+            this.searchBloodDonorToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("searchBloodDonorToolStripMenuItem.Image")));
+            this.searchBloodDonorToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.searchBloodDonorToolStripMenuItem.Name = "searchBloodDonorToolStripMenuItem";
+            this.searchBloodDonorToolStripMenuItem.Size = new System.Drawing.Size(174, 64);
+            this.searchBloodDonorToolStripMenuItem.Text = "Search Blood Donor";
+            // 
             // locationToolStripMenuItem
             // 
             this.locationToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("locationToolStripMenuItem.Image")));
             this.locationToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.locationToolStripMenuItem.Name = "locationToolStripMenuItem";
-            this.locationToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.locationToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
             this.locationToolStripMenuItem.Text = "Location";
             // 
             // bloodGroupToolStripMenuItem
@@ -167,15 +137,27 @@ namespace BloodBankApp
             this.bloodGroupToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("bloodGroupToolStripMenuItem.Image")));
             this.bloodGroupToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.bloodGroupToolStripMenuItem.Name = "bloodGroupToolStripMenuItem";
-            this.bloodGroupToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.bloodGroupToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
             this.bloodGroupToolStripMenuItem.Text = "Blood Group";
+            // 
+            // stockToolStripMenuItem
+            // 
+            this.stockToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.increaseToolStripMenuItem,
+            this.decreaseToolStripMenuItem,
+            this.detailsToolStripMenuItem});
+            this.stockToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("stockToolStripMenuItem.Image")));
+            this.stockToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.stockToolStripMenuItem.Name = "stockToolStripMenuItem";
+            this.stockToolStripMenuItem.Size = new System.Drawing.Size(98, 64);
+            this.stockToolStripMenuItem.Text = "Stock";
             // 
             // increaseToolStripMenuItem
             // 
             this.increaseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("increaseToolStripMenuItem.Image")));
             this.increaseToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.increaseToolStripMenuItem.Name = "increaseToolStripMenuItem";
-            this.increaseToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.increaseToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
             this.increaseToolStripMenuItem.Text = "Increase";
             // 
             // decreaseToolStripMenuItem
@@ -183,7 +165,7 @@ namespace BloodBankApp
             this.decreaseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("decreaseToolStripMenuItem.Image")));
             this.decreaseToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.decreaseToolStripMenuItem.Name = "decreaseToolStripMenuItem";
-            this.decreaseToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.decreaseToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
             this.decreaseToolStripMenuItem.Text = "Decrease";
             // 
             // detailsToolStripMenuItem
@@ -191,16 +173,35 @@ namespace BloodBankApp
             this.detailsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("detailsToolStripMenuItem.Image")));
             this.detailsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.detailsToolStripMenuItem.Name = "detailsToolStripMenuItem";
-            this.detailsToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.detailsToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
             this.detailsToolStripMenuItem.Text = "Details";
+            // 
+            // deleteDonorToolStripMenuItem
+            // 
+            this.deleteDonorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.deleteDonorToolStripMenuItem1});
+            this.deleteDonorToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deleteDonorToolStripMenuItem.Image")));
+            this.deleteDonorToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.deleteDonorToolStripMenuItem.Name = "deleteDonorToolStripMenuItem";
+            this.deleteDonorToolStripMenuItem.Size = new System.Drawing.Size(138, 64);
+            this.deleteDonorToolStripMenuItem.Text = "Delete Donor";
             // 
             // deleteDonorToolStripMenuItem1
             // 
             this.deleteDonorToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("deleteDonorToolStripMenuItem1.Image")));
             this.deleteDonorToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.deleteDonorToolStripMenuItem1.Name = "deleteDonorToolStripMenuItem1";
-            this.deleteDonorToolStripMenuItem1.Size = new System.Drawing.Size(184, 26);
+            this.deleteDonorToolStripMenuItem1.Size = new System.Drawing.Size(147, 26);
             this.deleteDonorToolStripMenuItem1.Text = "Delete Donor";
+            // 
+            // logOutToolStripMenuItem
+            // 
+            this.logOutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("logOutToolStripMenuItem.Image")));
+            this.logOutToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(122, 64);
+            this.logOutToolStripMenuItem.Text = "Log Out";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // Dashboard
             // 
