@@ -60,5 +60,24 @@ namespace BloodBankApp
         {
             btnLogin.Enabled = false;
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if(txtUsername.Text=="SI21" && txtPassword.Text=="pass")
+            {
+                Dashboard db = new Dashboard();
+                db.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Enter valid username or password!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
