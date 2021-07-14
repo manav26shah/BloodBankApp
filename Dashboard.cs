@@ -33,5 +33,11 @@ namespace BloodBankApp
             fm.Show();
             this.Hide();
         }
+
+        private void addNewDonorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddNewDonor and = new AddNewDonor();
+            and.Show();
+        }
     }
 }
