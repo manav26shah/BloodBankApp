@@ -39,5 +39,11 @@ namespace BloodBankApp
             AddNewDonor and = new AddNewDonor();
             and.Show();
         }
+
+        private void updateDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            updateDonorDetails udd = new updateDonorDetails();
+            udd.Show();
+        }
     }
 }
