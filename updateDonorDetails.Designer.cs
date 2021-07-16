@@ -33,7 +33,6 @@ namespace BloodBankApp
             this.label1 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
             this.txtAddress = new System.Windows.Forms.RichTextBox();
             this.txtBloodGroup = new System.Windows.Forms.ComboBox();
             this.txtGender = new System.Windows.Forms.ComboBox();
@@ -55,8 +54,9 @@ namespace BloodBankApp
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtDonorID = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -99,20 +99,7 @@ namespace BloodBankApp
             this.btnReset.Text = "Reset";
             this.btnReset.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnReset.UseVisualStyleBackColor = true;
-            // 
-            // btnSave
-            // 
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(216, 585);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(88, 34);
-            this.btnSave.TabIndex = 52;
-            this.btnSave.Text = "Update";
-            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // txtAddress
             // 
@@ -344,25 +331,42 @@ namespace BloodBankApp
             this.label2.TabIndex = 55;
             this.label2.Text = "Donor Id";
             // 
-            // textBox1
+            // txtDonorID
             // 
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(389, 101);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(137, 30);
-            this.textBox1.TabIndex = 56;
+            this.txtDonorID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDonorID.Location = new System.Drawing.Point(389, 101);
+            this.txtDonorID.Name = "txtDonorID";
+            this.txtDonorID.Size = new System.Drawing.Size(137, 30);
+            this.txtDonorID.TabIndex = 56;
+            this.txtDonorID.TextChanged += new System.EventHandler(this.txtDonorID_TextChanged);
             // 
-            // button1
+            // btnSearch
             // 
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(541, 100);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 31);
-            this.button1.TabIndex = 57;
-            this.button1.Text = "Search";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
+            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearch.Location = new System.Drawing.Point(541, 100);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(90, 31);
+            this.btnSearch.TabIndex = 57;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
+            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdate.Location = new System.Drawing.Point(212, 585);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(88, 34);
+            this.btnUpdate.TabIndex = 58;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // updateDonorDetails
             // 
@@ -371,12 +375,12 @@ namespace BloodBankApp
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(921, 649);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.txtDonorID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnReset);
-            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.txtBloodGroup);
             this.Controls.Add(this.txtGender);
@@ -402,6 +406,7 @@ namespace BloodBankApp
             this.Name = "updateDonorDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "updateDonorDetails";
+            this.Load += new System.EventHandler(this.updateDonorDetails_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -411,7 +416,6 @@ namespace BloodBankApp
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnReset;
-        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.RichTextBox txtAddress;
         private System.Windows.Forms.ComboBox txtBloodGroup;
         private System.Windows.Forms.ComboBox txtGender;
@@ -433,7 +437,8 @@ namespace BloodBankApp
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtDonorID;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }
