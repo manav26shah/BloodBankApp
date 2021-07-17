@@ -45,5 +45,29 @@ namespace BloodBankApp
             updateDonorDetails udd = new updateDonorDetails();
             udd.Show();
         }
+
+        private void allDonorDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AllDonorDetails add = new AllDonorDetails();
+            add.Show();
+        }
+
+        private void locationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            searchBloodDonorAddress sbda = new searchBloodDonorAddress();
+            sbda.Show();
+        }
+
+        private void bloodGroupToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SearchDonorByBlood sdbb = new SearchDonorByBlood();
+            sdbb.Show();
+        }
+
+        private void increaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StockIncrease si = new StockIncrease();
+            si.Show();
+        }
     }
 }
