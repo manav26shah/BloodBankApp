@@ -14,7 +14,7 @@ namespace BloodBankApp
         public SqlConnection getConnection()
         {
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = "data source = DESKTOP-7CCI381\\SQLEXPRESS;database = bloodbank;integrated security=True";
+            con.ConnectionString = "data source = DELL\\SQLEXPRESS;database = bloodbank;integrated security=True";
             return con;
         }
 

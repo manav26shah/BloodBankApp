@@ -174,6 +174,7 @@ namespace BloodBankApp
             this.decreaseToolStripMenuItem.Name = "decreaseToolStripMenuItem";
             this.decreaseToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
             this.decreaseToolStripMenuItem.Text = "Decrease";
+            this.decreaseToolStripMenuItem.Click += new System.EventHandler(this.decreaseToolStripMenuItem_Click);
             // 
             // detailsToolStripMenuItem
             // 

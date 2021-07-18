@@ -69,5 +69,11 @@ namespace BloodBankApp
             StockIncrease si = new StockIncrease();
             si.Show();
         }
+
+        private void decreaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StockDecrease sd = new StockDecrease();
+            sd.Show();
+        }
     }
 }
