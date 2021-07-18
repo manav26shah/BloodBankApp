@@ -85,6 +85,12 @@
     <Compile Include="SearchDonorByBlood.Designer.cs">
       <DependentUpon>SearchDonorByBlood.cs</DependentUpon>
     </Compile>
+    <Compile Include="Stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock.Designer.cs">
+      <DependentUpon>Stock.cs</DependentUpon>
+    </Compile>
     <Compile Include="StockDecrease.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SearchDonorByBlood.resx">
       <DependentUpon>SearchDonorByBlood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock.resx">
+      <DependentUpon>Stock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StockDecrease.resx">
       <DependentUpon>StockDecrease.cs</DependentUpon>
