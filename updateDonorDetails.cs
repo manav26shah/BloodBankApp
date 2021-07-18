@@ -81,5 +81,19 @@ namespace BloodBankApp
         {
             txtDonorID.Clear();
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (txtDonorID.Text == "" || txtName.Text=="")
+            {
+                MessageBox.Show("Please enter valid ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                String query = "delete from newDonor where did = " + txtDonorID.Text + "";
+                fn.setData(query);
+                updateDonorDetails_Load(this, null);
+            }
+        }
     }
 }
